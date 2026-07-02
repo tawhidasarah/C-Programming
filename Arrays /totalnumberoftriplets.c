@@ -1,0 +1,18 @@
+//Ques : Count the number of triplets whose sum is equal to the given value x. 
+#include<stdio.h>
+int main()
+{
+    int arr[7]={1,2,3,4,5,6,7};
+    int x=7;
+    int totalpairs=0;
+    for(int i=0;i<=6;i++){
+        for(int j=i+1;j<=6;j++){
+            for(int k=j+1;k<=6;k++)
+            if(arr[i] + arr[j] + arr[k] == x){
+                totalpairs++;
+            }
+        }
+    }
+    printf("The total number of pairs is %d",totalpairs);
+    return 0;
+}
