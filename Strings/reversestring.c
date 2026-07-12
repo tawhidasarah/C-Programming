@@ -1,16 +1,20 @@
-//Write a C program to reverse a string without using strrev() function. 
+//Write a C program to reverse a string without using strrev() function.
 #include<stdio.h>
 #include<string.h>
 int main()
 {
-    char str[]="Sarah";
-    int len=0; 
-    while(str[len]!='\0'){
+    char str[50];
+    fgets(str,sizeof(str),stdin);
+    int i=0,len=0,temp=0;
+    while(str[i]!='\0'){
         len++;
+        i++;
     }
-    for(int i=len-1;i>=0;i--){
-        printf("%c",str[i]);
+    for(i=0;i<len/2;i++){
+        temp=str[i];
+        str[i]=str[len-1-i];
+        str[len-1-i]=temp;
     }
-    
+    printf("%s",str);
     return 0;
 }
