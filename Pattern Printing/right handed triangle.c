@@ -1,4 +1,8 @@
 //print a right handed triangle pattern
+//    *
+//   **
+//  ***
+// ****
 #include<stdio.h>
 int main()
 {
