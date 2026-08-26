@@ -26,6 +26,7 @@ int main()
         str1[len+j]=str2[j];
         j++;
     }
+    str1[len+j]='\0';
     printf("%s",str1);
     return 0;
 }
